@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+}
+
+.section-mt {
+  margin-top: 50px;
+}
+
+.section-pt {
+  padding-top: 50px;
+}
+
+.section-py {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+.sub-title {
+  font-weight: 100;
+}
+
+input, textarea {
+  padding: 20px 0;
+  border-bottom: 2px solid rgb(80, 78, 78);
+}
+
+img {
+  max-width: 100%;
+}
+
+.header, .main, .rent, .footer {
+  background-color: #f5f4ef;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  text-transform: uppercase;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  column-gap: 30px;
+  margin-top: 60px;
+}
+
+.grid-row .img {
+  position: relative;
+  z-index: 2;
+}
+
+.grid-row .img::before {
+  content: "";
+  position: absolute;
+  background-image: url("https://www.onlygfx.com/wp-content/uploads/2016/11/grunge-overlay-1.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.grid-row:nth-of-type(1) .img::before {
+  top: 30px;
+  right: 30px;
+}
+
+.grid-row:nth-of-type(2) .img::before {
+  height: 70%;
+  top: 15%;
+  left: 30px;
+}
+
+.grid-row:nth-of-type(3) .img::before {
+  top: -30px;
+  left: -30px;
+}
+
+.grid-row:nth-of-type(4) .img::before {
+  top: 30px;
+  left: 30px;
+}
+
+.grid-row:nth-of-type(5) .img::before {
+  height: 70%;
+  top: 15%;
+  right: 30px;
+}
+
+.grid-row .desc {
+  align-self: center;
+  margin-top: 30px;
+}
+
+.grid-row .desc h2 {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.grid-row:nth-child(even)>.img {
+  order: 1;
+}
+
+.rent, .contact {
+  text-align: center;
+}
+
+.contact {
+  background-color: #9bcbbb;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 60px;
+}
+
+form .flex-row:not(.button)>* {
+  flex: auto;
+}
+
+form .flex-row.button button {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-left: auto;
+  border: 2px solid grey;
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+
+.footer {
+  text-align: center;
+}
